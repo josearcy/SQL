@@ -1,0 +1,30 @@
+--Create a store database
+
+CREATE TABLE SWEATSHIRTS (id INTEGER PRIMARY KEY , name TEXT , rating INTEGER, price INTEGER, release_year INTEGER);
+
+INSERT INTO SWEATSHIRTS VALUES
+(1, "DATA NERD", 1, 24.99, 2022),
+(2, "SQL" , 2, 24.99, 2021),
+(3, "CAT", 3, 25.99, 2019),
+(4, "DOG", 4, 25.99, 2019),
+(5, "DATA ANALYST", 5, 19.99, 2021),
+(6, "PLANT LADY", 6, 20.99, 2021),
+(7, "COFFEE", 7, 19.99, 2018),
+(8, "MESSY BUN", 8, 15.99, 2018),
+(9, "BEACH", 9, 12.99, 2017),
+(10, "HOMEBODY", 10, 14.99, 2020),
+(11, "WINE", 11, 12.99, 2020),
+(12, "TIE DYE", 12, 12.99, 2021),
+(13, "YOGA", 13, 14.99, 2021),
+(14, "EARTH", 14, 12.99, 2019),
+(15, "BIBLE VERSE", 15, 19.99, 2018);
+
+SELECT * FROM SWEATSHIRTS ORDER BY price;
+
+SELECT AVG(price) "Avg price of sweatshirt"
+FROM SWEATSHIRTS;
+
+SELECT name, price, rating
+FROM SWEATSHIRTS
+order by rating
+limit 5;
